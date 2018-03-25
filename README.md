@@ -10,11 +10,7 @@ Example of using the new *Preserve Vector Data* asset catalog feature, introduce
 
 Xcode 9 added the support to treat the image as a vector at runtime. This means that images can be smoothly scaled to arbitrary sizes. The only change you need to make is to tick Preserve Vector Data for the PDF image in the asset catalog:
 
-![Image Assets - Vector PDF Attributes](Image Assets - Vector PDF Attributes.png)
-
-Resizing: [x] *Preserve Vector Data*
-
-Scales: *Single Scale*
+<img src="https://raw.githubusercontent.com/satyadevchauhan/VectorPDFExample/master/Image%20Assets%20-%20Vector%20PDF%20Attributes.png">
 
 ## Accessibility
 
@@ -28,8 +24,8 @@ To add support:
 
     2. When adding the image view or button to the Storyboard make sure to tick Adjusts Image Size in Attributes Inspector:
        
-       ![Accessibility-Adjust Image Size](Accessibility-Adjust Image Size.png)
-       
+       <img src="https://github.com/satyadevchauhan/VectorPDFExample/master/Accessibility-Adjust%20Image%20Size.png">
+        
        Accessibilty: [x] Adjust Image Size
 
     3. If adding the image view in code:
