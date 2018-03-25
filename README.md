@@ -24,7 +24,7 @@ To add support:
 
     2. When adding the image view or button to the Storyboard make sure to tick Adjusts Image Size in Attributes Inspector:
        
-       <img src="https://github.com/satyadevchauhan/VectorPDFExample/master/Accessibility-Adjust%20Image%20Size.png">
+       <img src="https://raw.githubusercontent.com/satyadevchauhan/VectorPDFExample/master/Accessibility-Adjust%20Image%20Size.png">
         
        Accessibilty: [x] Adjust Image Size
 
