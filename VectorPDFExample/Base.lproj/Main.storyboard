@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TOJ-We-Cck">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VectorPDFExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aUx-63-6m4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vKl-hO-rd1">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="ypG-5B-kdJ" customClass="ImageCollectionViewCell" customModule="VectorPDFExample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rtq-uw-kzh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Rtq-uw-kzh" secondAttribute="trailing" id="7Jh-6A-YI4"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rtq-uw-kzh" secondAttribute="bottom" id="FLX-ZY-GYt"/>
+                                            <constraint firstItem="Rtq-uw-kzh" firstAttribute="top" secondItem="ypG-5B-kdJ" secondAttribute="top" id="jPB-Ac-onY"/>
+                                            <constraint firstItem="Rtq-uw-kzh" firstAttribute="leading" secondItem="ypG-5B-kdJ" secondAttribute="leading" id="rD3-aO-lxx"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Rtq-uw-kzh" id="5eA-vD-lS6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBL-ra-U9n">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4CM-bB-vLn">
+                                        <rect key="frame" x="18" y="0.0" width="339" height="41"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rFD-0K-qnT"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4CM-bB-vLn" secondAttribute="trailing" constant="20" symbolic="YES" id="2qd-dw-jlu"/>
+                                    <constraint firstAttribute="bottom" secondItem="4CM-bB-vLn" secondAttribute="bottom" id="6Hk-ON-F1r"/>
+                                    <constraint firstItem="4CM-bB-vLn" firstAttribute="leading" secondItem="YBL-ra-U9n" secondAttribute="leading" constant="20" symbolic="YES" id="iaj-XF-AfM"/>
+                                    <constraint firstItem="4CM-bB-vLn" firstAttribute="top" secondItem="YBL-ra-U9n" secondAttribute="top" id="omc-jy-1pv"/>
+                                    <constraint firstAttribute="height" constant="40" id="z7Z-Uk-Eka"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aUx-63-6m4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BWk-Nv-sqW"/>
+                            <constraint firstItem="aUx-63-6m4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DBi-Zo-LWS"/>
+                            <constraint firstItem="YBL-ra-U9n" firstAttribute="top" secondItem="aUx-63-6m4" secondAttribute="bottom" id="MCc-Zk-esf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aUx-63-6m4" secondAttribute="trailing" id="Xn0-EL-9tD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YBL-ra-U9n" secondAttribute="trailing" id="eDV-YX-FIk"/>
+                            <constraint firstItem="YBL-ra-U9n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gYh-sa-2au"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YBL-ra-U9n" secondAttribute="bottom" id="qWw-Eo-k7f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6gB-mx-fMA"/>
+                    <connections>
+                        <outlet property="collectionView" destination="aUx-63-6m4" id="rW0-1G-6Wl"/>
+                        <outlet property="slider" destination="4CM-bB-vLn" id="mu6-aM-7fm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="31"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hIH-i3-Vjg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TOJ-We-Cck" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8TV-Dy-QBV">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kya-8j-aFI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ou3-K2-RIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="31.484257871064472"/>
+        </scene>
+    </scenes>
+</document>
